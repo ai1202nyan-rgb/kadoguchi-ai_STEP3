@@ -8,30 +8,30 @@
   <link rel="stylesheet" href="test.css">
 </head>
 
+<body>
 <header>
     <!-- ここに見出しと説明文を追加 -->
      <h2>世界一甘いお店</h2>
-  </header>
+    </header>
 
   <!-- ナビゲーション（ul, li, aを使用） -->
- <div class="main-container">
+  <div class="container">
   <nav> 
     <ul>
-      <li><a href="#section1">トップ</a></li><a href="任意"></a>
-      <li><a href="#section2">新着情報</a></li><a href="任意"></a>
-      <li><a href="#section3">おすすめのスイーツ</a></li><a href="任意"></a>
-      <li><a href="#section4">お問い合わせ</a></li><a href="任意"></a>
+      <li><a href="#section1">トップ</a><a href="任意"></a></li>
+      <li><a href="#section2">新着情報</a><a href="任意"></a></li>
+      <li><a href="#section3">おすすめのスイーツ</a><a href="任意"></a></li>
+      <li><a href="#section4">お問い合わせ</a><a href="任意"></a></li>
     </ul>
   </nav>
 
-  <main>
-  <table>
-  <table border="4">
-<!-- フォーム開始 --> 
-<form action="#" method="post">  
+    <!-- フォーム開始 --> 
+<main>
+  <form action="#" method="post">  
+  <table> 
       <!-- TODO: 名前入力欄を作成（label + input） -->
      <tr>
-      <th>お名前</th>
+      <th><label for>お名前</label></th>
       <td>
       <input type="text" id="name" name="name" size="40">
       </td>
@@ -39,7 +39,7 @@
 
         <!-- TODO: お近くのお店を作成 -->
       <tr>
-      <th>お近くのお店</th>
+      <th><label for>お近くのお店</label></th>
       <td>
       <select id="store" name="store">
         <option value="hokkaido/tohoku">北海道・東北</option>
@@ -54,23 +54,15 @@
 
         <!-- TODO: 電話入力欄（textarea） -->
       <tr>
-      <th>電話</th>
+      <th><label for="phone">電話</label></th>
       <td>
-      <input type="text" id="phone"name="phone" size="40">
-      </td>
-      </tr>
-
-        <!-- TODO: 電話番号入力欄 -->
-      <tr>
-        <th>電話番号</th>
-      <td>
-      <input type="telphone" id="telphone" name="telphone" size="40">
+      <input type="tel" id="phone"name="phone" size="40">
       </td>
       </tr>
 
         <!-- TODO: メールアドレス入力欄-->
       <tr>
-      <th>メールアドレス</th>
+      <th><label for="email">メールアドレス</label></th>
       <td>
       <input type="email" id="email" name="email" size="40">
       </td>
@@ -83,25 +75,26 @@
       <input type="radio" name="inquiry type" value="item" id="item">
       <label for="item">商品について</label>
 
-      <input type="radio" name="inquiry type" value="employee">
+      <input type="radio" name="inquiry type" value="employee" id="employee">
       <label for="employee">従業員について</label>
       </td>
       </tr>
 
         <!-- TODO:　お問い合わせ内容-->
       <tr>
-      <th>お問い合わせ内容</th>
+      <th><label for="content">お問い合わせ内容</label></th>
       <td>
-      <textarea id="inquiry content" name="inquiry content"placeholder="詳細を入力してください"row="5" cols="30" ></textarea>
-    </td>
+      <textarea id="inquiry content" name="inquiry content"placeholder="詳細を入力してください"rows="5" cols="30" ></textarea>
+      </td>
       </tr>
       </table>
       
+      
         <!--送信ボタン-->
+    <div class="submit_btn">
         <button type="submit">送信</button>
-
+    </div>
       </form>
-
   </main>
   </div>
 
@@ -111,3 +104,4 @@
 
 </body>
 </html>
+

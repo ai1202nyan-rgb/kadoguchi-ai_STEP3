@@ -12,13 +12,11 @@ body {
   margin: 0;
   /* TODO: 内側余白もリセットしよう */
   padding: 0;
-  width:800px;
-  max-height: 100px;
-  height: 100px;
+  min-height: 100vh;
 }
 
 /* 各要素に余白をつけて整えましょう */
-main, section, header, footer, aside, nav {
+main, section, header, footer, nav {
   /* TODO: セクションの内側余白を設定 */
   padding: 15px;
 }
@@ -30,55 +28,68 @@ header{
   /* TODO: 文字色を設定しよう */
   color: brown;
   /* TODO: テキストを中央揃えにしよう */
-  text-align: center;  
+  text-align: center;
+  margin: 0 auto;  
+  height: 80px;
+  width: 970px;
+}
+
+
+.container {
+  max-width: 1000px;
+  display: flex;
+  flex:1;
+  flex-wrap: wrap;
+  min-height: 400px;
   margin: 0 auto;
-  width:800px;
 }
 
 main{
- margin: 0 auto;
- width:500px;
+ justify-content: center ;
  flex: 1;
- min-height: 500px;
+ height: 500px;
+ width:600px;
 }
 
-.main-container{
- display: flex;
- align-items: stretch;
- margin-bottom: 0;
-}
 
 /* ナビゲーション全体 トップなど*/
 nav{
   /* TODO: 背景色を設定 */
+  display: flex;
   background-color:#f37eb5;
-  /* TODO: 内側余白を設定 */
-  width: 250px;
-  padding: 10px;
-  justify-content:flex-start;
+  padding: 15px 20px;
+  height: auto;
+  width: 200px;
+  margin: 0 auto;
+}
+
+nav ul{
+  padding: 0;
+  margin: 0 auto;
 }
 
 nav li {
   /* TODO: リンクの間に右余白をつけよう */
-  margin-right: 25px;
+  margin-right: 10px;
 }
-
 
 nav a:hover {
   /* TODO: ホバー時の色変更 */
   color:whitesmoke;
   /* TODO: 太字で強調 */
   font-weight: bold;
-  /* TODO: 下線を表示 */
 }
 
 /* 表 */
 table {
-  width:500px;
-  border-collapse: collapse;
-  max-inline-size: max-content;
-  margin-inline: auto;
+  width: auto;
+  margin: 0 auto;
   padding: 0;
+  border: 4px solid black;
+}
+
+th,td{
+  border: 4px solid black;
 }
 
 table.td {
@@ -86,7 +97,7 @@ table.td {
 }
 
 
-button {
+.submit_btn button{
   /* TODO: 背景色を設定 */
   background-color: palevioletred;
   /* TODO: 文字色を白に */
@@ -99,9 +110,13 @@ button {
   border-radius: 4px;
   /* TODO: カーソルを指マークに */
   cursor: pointer;
-  float: right; 
+  margin-left: 550px;
 }
 
+.submit_btn button:hover {
+  background-color: #d87093; /* 少し濃い色に */
+  transform: scale(1.05);    /* 軽く大きくする */
+}
 
 /* フッター */
 footer {
@@ -112,12 +127,9 @@ footer {
   /* TODO: テキスト中央揃え */
   text-align: center;
   /* TODO: 内側余白 */
-  padding: 0;
   /* TODO: 上に外側余白 */
-  margin: 0;
-  width:825px;
   height: 100px;
-  max-height: 100px;
-  position: fixed;
-  bottom: 0;
+  width: 970px;
+  margin: 0 auto;
+ margin-top: auto;
 }
